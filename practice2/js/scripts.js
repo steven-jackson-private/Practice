@@ -28,7 +28,7 @@ $('.fadeto').fadeTo("slow", 0.5);
 .mouseleave(function(){
 $('.fadeto').fadeTo("slow", 1);
 });
-//Fade
+//Fade End
 
 //Slide
 $('.slide')
@@ -36,7 +36,15 @@ $('.slide')
 .click(function(){
 $('#slidedown .panel-body').slideDown('slow').slideUp('slow');
 });
-//Slide
+//Slide End
+
+//Explode
+$('.boom')
+
+.click(function(){
+  $('img').hide('explode');
+});
+//Explode End
 
 
 

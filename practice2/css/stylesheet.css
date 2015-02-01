@@ -1,4 +1,7 @@
 
 #slidedown .panel-body {
-	display: none;	
+	display: none;
+}
+img {
+	height: 100px;
 }
