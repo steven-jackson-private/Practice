@@ -46,7 +46,21 @@ $('.boom')
 });
 //Explode End
 
+//animate
+$('.animate')
 
+.click(function(){
+  $('.animate').animate({
+    width: "100px",
+}, 2000);
+
+});
+
+//animate End
+
+//Accordion
+
+//Accordion End
 
 }
 
