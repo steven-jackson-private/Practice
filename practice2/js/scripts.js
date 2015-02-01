@@ -1,0 +1,33 @@
+
+var jmain = function(){
+
+
+$('p').fadeOut(300).fadeIn(300);
+
+//Mouse Enter state
+$('.hover')
+
+.mouseenter(function(){
+$('#hover').html('Mouse over state');
+})
+
+.mouseleave(function(){
+$('#hover').html('Mouse leave state');
+});
+//Mouse Enter end
+
+//Fade
+$('.fadeto')
+
+.mouseenter(function(){
+$('.fadeto').fadeTo("slow", 0.5);
+})
+
+.mouseleave(function(){
+$('.fadeto').fadeTo("slow", 1);
+});
+//Fade
+
+}
+
+$(document).ready(jmain);
