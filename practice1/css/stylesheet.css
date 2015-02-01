@@ -6,6 +6,11 @@ color: white;
 
   
 }
+
+p {
+
+  color: #b7b7b7;
+}
 a {
   color: white;
 }
@@ -82,7 +87,7 @@ border-radius: 5px;
 }
 
 div.row {
-  border-bottom: 1px solid #f1f1f1;
+  
   margin: 40px 0px ;
 }
 
@@ -113,15 +118,23 @@ text-align: center;
 padding: 30px;
 }
 
+.row.section-1{
+  margin:10px 0px ;
+  padding-bottom: 40px;
+ border-bottom: 1px solid #f1f1f1;
+}
+
 .row.section-3 {
   margin:0px ;
 padding: 40px 0px ;
   background-color: #faf9f9;
+  border:0px solid;
 }
+
+
 .row.section-2{
   margin:10px 0px ;
   padding-bottom: 40px;
-  border:0px solid;
 }
 
 .row.section-3 h3{
@@ -143,4 +156,77 @@ padding: 40px 0px ;
 .row.section-4 h3{
   font-weight: bold; 
   
+}
+
+.container.section-5 h2{
+  font-weight: bold;
+}
+
+.row.section-6 {
+  margin:0px ;
+padding: 40px 0px ;
+  background-color: #faf9f9;
+}
+
+section.section-6{
+text-align: center;
+padding: 30px;
+}
+
+
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+
+.section-6 img{
+padding: 30px; 
+margin-bottom: 42px;
+float: left;
+}
+
+.section-6 h3{
+font-weight: bold;
+}
+.section-7{
+  padding-bottom: 40px;
+}
+.section-7 img{
+height: 235px;
+width: 285px;
+}
+
+.section-7 h2{
+  padding: 40px 0px;
+font-size: 42px;
+}
+
+footer .row {
+  background-color: #141414;
+  margin: 0px;
+  padding:20px 0px;
+}
+
+
+footer ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+footer a {
+ color: #3a3a3a;
+}
+
+
+.footer-header {
+font-size: 18px;
+  color: #FFF;
+  padding: 0 0 0 15px;
+}
+
+.social-links img {
+
+  padding: 0px 5px;
 }
