@@ -16,6 +16,8 @@ $('#hover').html('Mouse leave state');
 });
 //Mouse Enter end
 
+
+
 //Fade
 $('.fadeto')
 
@@ -27,6 +29,16 @@ $('.fadeto').fadeTo("slow", 0.5);
 $('.fadeto').fadeTo("slow", 1);
 });
 //Fade
+
+//Slide
+$('.slide')
+
+.click(function(){
+$('#slidedown .panel-body').slideDown('slow').slideUp('slow');
+});
+//Slide
+
+
 
 }
 
