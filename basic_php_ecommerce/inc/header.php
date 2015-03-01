@@ -44,8 +44,8 @@ Start: 28 Feb 2015
 						</ul>
 					</div>
 					<div id="search">
-						<form action="" method="post">
-							<input type="text" class="field" value="Quick search..." title="Quick search..." />
+						<form action="inc/search.php" method="get">
+							<input type="text" class="field" value="Quick search..." title="Quick search..." name="search"/>
 						</form>
 					</div>
 					<div class="cl">&nbsp;</div>

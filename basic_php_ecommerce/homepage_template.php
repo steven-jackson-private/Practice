@@ -59,12 +59,12 @@
 				<!-- Looping first set of products to li -->
 				<?php 
 
-
+$first = true;
 				$count = 0;
 				foreach ($products as $product){
 					
 
-					// Product listing Contional
+					// Product listing Condtional
 					if ($count < 3) {
 						?>
 
@@ -75,24 +75,29 @@
 								<span class="order">catalog number: <span class="number"><?php echo $product['product_id']; ?></span></span>
 								<span class="order"><span class="buy-text">Buy Now</span><span class="price"><span class="dollar">$</span><?php echo $product['price']; ?></span></span>
 							</a>	
+
 							<?php echo $count; ?>
 						</li>
 
-						<?php 	
+						<?php 	$count =  $count +1; // Incrementing count variable
+						
+
 						//TODO: Fix
 						//condtional to add classes and div's
-						$add_div = $count +1; 
-						if ($add_div  > 3  ) {
-							echo $add_div;
-							echo '</ul><div class="cl">&nbsp;</div></div><!-- End Row --><!-- Row --><div class="row last-row"><ul>';
-						}
+						
 
 						
-						$count =  $count +1;
+						
 
 						} // end if  
 
 						elseif ($count < 8){
+
+						// 	if ($first == true){
+						// 	echo '</ul><div class="cl">&nbsp;</div></div><!-- End Row --><!-- Row --><div class="row last-row"><ul>';
+						// 	$first = false;
+						// }
+							
 							?>
 
 
@@ -130,14 +135,16 @@
 				<div class="slider-holder">
 					<ul>
 
-
-
+						
 						<?php 
 
+						//Connects to function to get the products that have the value of 'true' in the database.
+						//Returns array and loops through and displays the values that meet the query
+						//EXAMPLE: 
+						//Product 1 is not within carousel as bestseller tag is set to false
+						
+						$products = get_bestseller();
 						foreach ($products as $product){
-
-
-					//TODO: Fix to search by Bestseller Tag
 
 							?>
 

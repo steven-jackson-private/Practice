@@ -9,6 +9,12 @@ if (isset ($_GET["id"])){
 	$page_id = $_GET["id"];
 }
 
+if (isset ($_GET["results"])){
+
+	$page_id_search = $_GET["results"];
+	
+}
+
 
 if (empty ($page_id)) {
 	header ("Location: " . BASE_URL . '/index.php');
@@ -20,6 +26,7 @@ if (empty ($page_id)) {
 ?>
 <!-- Content -->
 <div id="content">
+
 <div class="row">	
 
 	<?php 
@@ -36,10 +43,19 @@ if (empty ($page_id)) {
 	} else if ($page_id == 'common') {
 
 		get_product_listing ($page_id);
+
+	} else if ($page_id == 'search') {
+	
+
+	$search_array = search($page_id_search);
+	search_results ($search_array );
+	
+		
+
 	}
 
 	else {
-//Get single product from  get_single_product() function
+		//Get single product from  get_single_product() function
 		$single_product = get_single_product($page_id);
 
 		?>
@@ -60,7 +76,7 @@ if (empty ($page_id)) {
 	?>
 
 
-
+</div>
 </div>
 
 
