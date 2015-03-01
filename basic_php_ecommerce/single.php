@@ -46,13 +46,16 @@ if (empty ($page_id)) {
 
 	} else if ($page_id == 'search') {
 	
-
+	?>
+	<ul>
+ 	<?php
 	$search_array = search($page_id_search);
 	search_results ($search_array );
-	
-		
+	?>
+	</ul>
 
-	}
+	
+	<?php	}
 
 	else {
 		//Get single product from  get_single_product() function
@@ -78,8 +81,8 @@ if (empty ($page_id)) {
 
 </div>
 </div>
+</div>
 
-
-
+<div id="footer-push" class="cl">&nbsp;</div>
 
 	<?php include('inc/footer.php'); ?>

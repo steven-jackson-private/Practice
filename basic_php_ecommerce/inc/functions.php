@@ -149,20 +149,19 @@ function search_results ($products) {
 			?>
 
 
-			<ul>
+			
 				<li><img src="<?php echo BASE_URL . $product['img']; ?>" alt="">	</li>
 				<li>PRODUCT CODE: <?php echo $product['product_id']; ?></li>
 				<li>PRODUCT NAME: <?php echo $product['name']; ?></li>
 				<li>PRODUCT PRICE: <?php echo $product['price']; ?></li>
 
 
-			</ul>
+			
 <?php } //end foreach
 		} else {
 			echo 'There are no valid products';
 		}
 }//end search_results function
-
 
 
 
