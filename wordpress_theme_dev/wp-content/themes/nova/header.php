@@ -38,10 +38,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-<<<<<<< HEAD
+
                 <a id="logo" class="pull-left" href="<?php echo home_url( );?>"></a>
-                test
-                
+            
                  
                 
                   <?php    
@@ -61,7 +60,7 @@
     wp_nav_menu( $args );
         ?>
 
-=======
+
                 <a id="logo" class="pull-left" href="index.html"></a>
                 <div class="nav-collapse collapse pull-right">
                     <ul class="nav">
@@ -93,7 +92,7 @@
                 </div><!--/.nav-collapse -->
             </div>
         </div>
->>>>>>> parent of bea141e... Adding navigation
+
     </header>
     <!-- /header -->
 
