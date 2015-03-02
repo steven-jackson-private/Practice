@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 //Add theme support
 add_theme_support( 'menus');
 
@@ -16,6 +17,10 @@ add_action('init', 'register_theme_menus'); //
 
 
  //Enqueue Styles
+=======
+
+//Enqueue Styles
+>>>>>>> parent of bea141e... Adding navigation
 function nova_enqueue_styles() {
 	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css');
 wp_enqueue_style( 'fonts', 'http://fonts.googleapis.com/css?family=Fjalla+One);');
@@ -44,7 +49,7 @@ wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js' , arr
 wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/vendor/bootstrap.min.js' , array('jquery'), '', true);
 wp_enqueue_script( 'jquery_ba', get_template_directory_uri() . '/js/jquery.ba-cond.min.js', array('jquery'), '', true);
 wp_enqueue_script( 'slitslider', get_template_directory_uri() . '/js/jquery.slitslider.js', array('jquery'), '', true);
-wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js');
+// wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js');
  }
 
 
