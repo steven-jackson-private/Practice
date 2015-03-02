@@ -1,10 +1,8 @@
 
 <?php get_header(); ?>
-<section class="main-info">
 
 
-    <div class="container">
-
+ 
 <!--Slider-->
     <section id="slide-show">
      <div id="slider" class="sl-slider-wrapper">
@@ -64,6 +62,9 @@
 <!-- /slider-wrapper -->           
 </section>
 <!--/Slider-->
+
+<section class="main-info">
+   <div class="container">
 
         <div class="row-fluid">
             <div class="span9">
@@ -327,8 +328,5 @@
 
  
 
-<section class="main-info">
 
-
-    <div class="container">
 <?php get_footer();?>

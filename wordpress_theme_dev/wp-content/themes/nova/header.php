@@ -39,6 +39,7 @@
                     <span class="icon-bar"></span>
                 </a>
                 <a id="logo" class="pull-left" href="<?php echo home_url( );?>"></a>
+                test
                 
                  
                 
@@ -56,8 +57,8 @@
             'menu_class' => 'nav'
  
         );
-    
-        wp_nav_menu( $args );?>
+    wp_nav_menu( $args );
+        ?>
 
     </header>
     <!-- /header -->

@@ -1,4 +1,4 @@
-jQuery(function($) {
+
 $(function() {
     var Page = (function() {
 
@@ -28,4 +28,3 @@ $(function() {
 
     Page.init();
 });
-};
