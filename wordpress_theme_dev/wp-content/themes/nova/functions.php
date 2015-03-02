@@ -1,4 +1,20 @@
 <?php
+//Add theme support
+add_theme_support( 'menus');
+
+//Register menu
+function register_theme_menus(){
+
+	register_nav_menus( 
+		array(
+			'primary' => __('Primary Menu')
+			)
+		);
+}
+
+add_action('init', 'register_theme_menus'); //
+
+
 
 //Enqueue Styles
 function nova_enqueue_styles() {
@@ -27,7 +43,7 @@ wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js' , arr
 wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/vendor/bootstrap.min.js' , array('jquery'), '', true);
 wp_enqueue_script( 'jquery_ba', get_template_directory_uri() . '/js/jquery.ba-cond.min.js', array('jquery'), '', true);
 wp_enqueue_script( 'slitslider', get_template_directory_uri() . '/js/jquery.slitslider.js', array('jquery'), '', true);
-// wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js');
+wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js');
  }
 
 

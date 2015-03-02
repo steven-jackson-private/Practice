@@ -25,7 +25,7 @@
 </head>
 
 
-<body>
+<body <?php body_class();?>>
 
     <!--Header-->
     <header class="navbar navbar-fixed-top" style="margin-top:20px;">
@@ -38,8 +38,38 @@
                     <span class="icon-bar"></span>
                 </a>
                 <a id="logo" class="pull-left" href="index.html"></a>
-                <div class="nav-collapse collapse pull-right">
+                
+                 
+                
+                  <?php    /**
+        * Displays a navigation menu
+        * @param array $args Arguments
+        */
+        $args = array(
+            'theme_location' => 'Primary menu',
+            'menu' => '',
+            'container' => 'div',
+            'container_class' => 'nav-collapse collapse pull-right',
+            'container_id' => '',
+            'menu_class' => 'nav',
+            'menu_id' => '',
+            'echo' => true,
+            'fallback_cb' => 'wp_page_menu',
+            'before' => '',
+            'after' => '',
+            'link_before' => '',
+            'link_after' => '',
+            'items_wrap' => '<br>',
+            'depth' => 0,
+            'walker' => false,
+        );
+    
+        wp_nav_menu( $args );?>
+
+               <div class="nav-collapse collapse pull-right">
                     <ul class="nav">
+  
+                  
                         <li class="active"><a href="index.html">Home</a></li>
                         <li><a href="about-us.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
@@ -47,6 +77,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="icon-angle-down"></i></a>
                             <ul class="dropdown-menu">
+
                                 <li><a href="career.html">Career</a></li>
                                 <li><a href="blog-item.html">Blog Single</a></li>
                                 <li><a href="faq.html">FAQ</a></li>
