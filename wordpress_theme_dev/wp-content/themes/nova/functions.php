@@ -7,7 +7,7 @@ function register_theme_menus(){
 
 	register_nav_menus( 
 		array(
-			'primary' => __('Primary Menu')
+			'primary_menu' => __('Primary Menu')
 			)
 		);
 }
@@ -18,7 +18,7 @@ add_action('init', 'register_theme_menus'); //
 
 //Enqueue Styles
 function nova_enqueue_styles() {
-wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css');
+wp_enqueue_style( 'fonts', 'http://fonts.googleapis.com/css?family=Fjalla+One);');
 wp_enqueue_style( 'bootstrap.min', get_template_directory_uri() . '/css/bootstrap.min.css');
 wp_enqueue_style( 'bootstrap-responsive.min', get_template_directory_uri() . '/css/bootstrap-responsive.min.css');
 wp_enqueue_style( 'docs', get_template_directory_uri() . '/css/docs.css');
@@ -27,6 +27,7 @@ wp_enqueue_style( 'prettify', get_template_directory_uri() . '/css/prettify.css'
 wp_enqueue_style( 'sl-slide', get_template_directory_uri() . '/css/sl-slide.css');
 wp_enqueue_style( 'variables', get_template_directory_uri() . '/css/variables.css');
 wp_enqueue_style( 'mixins', get_template_directory_uri() . '/css/mixins.css');
+wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css');
 }
 
 add_action( 'wp_enqueue_scripts', 'nova_enqueue_styles' ); //Add action to wp_head();

@@ -3,7 +3,7 @@
 <head>
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title><?php bloginfo('title');?></title>
+    <title><?php $title =  bloginfo('title');?></title>
 
 
 
@@ -15,6 +15,8 @@
 
 </head>
 <body>
+<?php echo $title;?>
+
 <div id="art-main">
     <div class="cleared reset-box"></div>
     <div class="art-header">
