@@ -1,6 +1,7 @@
 <?php
 //Add theme support
 add_theme_support( 'menus');
+add_theme_support( 'post-thumbnails' ); 
 
 //Register menu
 function register_theme_menus(){
@@ -12,7 +13,7 @@ function register_theme_menus(){
 		);
 }
 
-add_action('init', 'register_theme_menus'); //
+add_action('init', 'register_theme_menus'); //End style hook
 
 
  //Enqueue Styles
@@ -30,13 +31,13 @@ wp_enqueue_style( 'variables', get_template_directory_uri() . '/css/variables.cs
 wp_enqueue_style( 'mixins', get_template_directory_uri() . '/css/mixins.css');
 }
 
-add_action( 'wp_enqueue_scripts', 'nova_enqueue_styles' ); //Add action to wp_head();
+add_action( 'wp_enqueue_scripts', 'nova_enqueue_styles' ); //End style hook
 
 
 function nova_enqueue_scripts() {
 
 //enqueue script in header
-wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js', '', '', false);
+wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js', array('jquery'), '', false);
 
 //enqueue script in before closing body tag
 wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js' , array('jquery'), '', true);
@@ -48,7 +49,7 @@ wp_enqueue_script( 'jquery_ba', get_template_directory_uri() . '/js/jquery.ba-co
  }
 
 
-add_action( 'wp_enqueue_scripts', 'nova_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'nova_enqueue_scripts' ); //End js hook
 
 
 

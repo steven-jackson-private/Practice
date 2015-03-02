@@ -1,11 +1,12 @@
-<?php get_header(); ?>
+
+<?php 
+/*
+Template Name: My Custom Page
+ */
+
+get_header(); ?>
              
-                          	
-            <?php while (have_posts()) : the_post(); ?>          
-                  
-           <!-- Div location -->    
-
-
+      test         
     <section class="title">
         <div class="container">
             <div class="row-fluid">
@@ -136,8 +137,10 @@
 </div>
 </div>
 </section>
-
-
+    	
+            <?php while (have_posts()) : the_post(); ?>          
+                  
+           <!-- Div location -->
 
 
                 <?php the_content( );?>
