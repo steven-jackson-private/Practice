@@ -30,7 +30,7 @@ $title = get_the_title();
 
 
     <!--Header-->
-    <header class="navbar navbar-fixed-top" style="margin-top:34px;">
+    <header class="navbar navbar-fixed-top" style="margin-top:32px;">
 
         <div class="navbar-inner">
             <div class="container">
