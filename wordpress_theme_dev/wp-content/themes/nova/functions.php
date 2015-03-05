@@ -3,12 +3,15 @@
 add_theme_support( 'menus');
 add_theme_support( 'post-thumbnails' ); 
 
+add_image_size( 'custom_size', 150, 149, true );
+
 //Register menu
 function register_theme_menus(){
 
 	register_nav_menus( 
 		array(
-			'primary_menu' => __('Primary Menu')
+			'primary_menu' => __('Primary Menu'),
+			'footer_menu' => __('Footer Menu')
 			)
 		);
 }

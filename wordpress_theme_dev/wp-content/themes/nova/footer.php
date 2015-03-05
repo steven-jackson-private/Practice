@@ -38,16 +38,25 @@
             <div id="tweets" class="span3">
                 <h4>OUR COMPANY</h4>
                 <div>
-                    <ul class="arrow">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Copyright</a></li>
-                        <li><a href="#">We are hiring</a></li>
-                        <li><a href="#">Clients</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
+
+                  <?php    
+        /**
+        * Displays a navigation menu
+        * @param array $args Arguments
+        */
+        $args = array(
+            'theme_location' => 'footer_menu',
+            'menu' => 'Footer Menu',   
+            'container_id' => 'footer_menu',
+            'menu_class' => 'arrow'
+ 
+        );
+         wp_nav_menu( $args );
+        ?>
+
+
+                      
+                   
                 </div>  
             </div>
             <!--Important Links-->

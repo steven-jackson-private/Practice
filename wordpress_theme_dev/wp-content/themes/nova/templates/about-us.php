@@ -1,16 +1,18 @@
 
 <?php 
 /*
-Template Name: My Custom Page
+Template Name: About us
  */
-
 get_header(); ?>
              
-      test         
+            
+
     <section class="title">
         <div class="container">
             <div class="row-fluid">
                 <div class="span6">
+
+
                     <h1>About Us</h1>
                 </div>
                 <div class="span6">
@@ -23,12 +25,16 @@ get_header(); ?>
         </div>
     </section>
     <!-- / .title -->   
-
     <section id="about-us" class="container main">
         <div class="row-fluid">
             <div class="span6">
                 <h2>What we are</h2>
-                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                <?php while (have_posts()) : the_post(); ?>     
+
+    <p><?php the_content( );?></p>
+        
+            <?php endwhile?>
+               
             </div>
             <div class="span6">
                 <h2>Our Skills</h2>
@@ -43,47 +49,50 @@ get_header(); ?>
 
         <hr>
 
+<!-- Custom post type -->
         <!-- Meet the team -->
+
         <h1 class="center">Meet the Team</h1>
 
         <hr>
+<div class="row-fluid">
 
-        <div class="row-fluid">
+<?php 
+//Register post type
+  $args = array(
+    
+    'post_type' => 'team',
+    'order' => 'ASC'
+    
+  );
+
+$teams = new WP_Query( $args );
+?>
+
+  <?php while ($teams->have_posts()) : $teams->the_post(); ?> 
+
+
+
+        
             <div class="span3">
                 <div class="box">
-                    <p><img src="images/sample/team1.jpg" alt="" ></p>
-                    <h5>Leonard M. Spurlock</h5>
-                    <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat.</p>
+                    <p>  <?php  the_post_thumbnail('full');?></p>
+                    <h5><?php the_field('name');?></h5>
+                    <p><?php the_field('description');?></p>
+
+                    <!-- Add conditional post type for social media icons -->
                     <a class="btn btn-social btn-facebook" href="#"><i class="icon-facebook"></i></a> <a class="btn btn-social btn-google-plus" href="#"><i class="icon-google-plus"></i></a> <a class="btn btn-social btn-twitter" href="#"><i class="icon-twitter"></i></a> <a class="btn btn-social btn-linkedin" href="#"><i class="icon-linkedin"></i></a>
                 </div>
             </div>
 
-            <div class="span3">
-                <div class="box">
-                    <p><img src="images/sample/team2.jpg" alt="" ></p>
-                    <h5>David J. Robbins</h5>
-                    <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat.</p>
-                    <a class="btn btn-social btn-facebook" href="#"><i class="icon-facebook"></i></a> <a class="btn btn-social btn-google-plus" href="#"><i class="icon-google-plus"></i></a> <a class="btn btn-social btn-twitter" href="#"><i class="icon-twitter"></i></a> <a class="btn btn-social btn-linkedin" href="#"><i class="icon-linkedin"></i></a>
-                </div>
-            </div>
 
-            <div class="span3">
-                <div class="box">
-                    <p><img src="images/sample/team4.jpg" alt="" ></p>
-                    <h5>Thomas M. Morgan</h5>
-                    <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat.</p>
-                    <a class="btn btn-social btn-facebook" href="#"><i class="icon-facebook"></i></a> <a class="btn btn-social btn-google-plus" href="#"><i class="icon-google-plus"></i></a> <a class="btn btn-social btn-twitter" href="#"><i class="icon-twitter"></i></a> <a class="btn btn-social btn-linkedin" href="#"><i class="icon-linkedin"></i></a>
-                </div>
-            </div>
 
-            <div class="span3">
-                <div class="box">
-                    <p><img src="images/sample/team3.jpg" alt="" ></p>
-                    <h5>Agustin E. Hightower</h5>
-                    <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat.</p>
-                    <a class="btn btn-social btn-facebook" href="#"><i class="icon-facebook"></i></a> <a class="btn btn-social btn-google-plus" href="#"><i class="icon-google-plus"></i></a> <a class="btn btn-social btn-twitter" href="#"><i class="icon-twitter"></i></a> <a class="btn btn-social btn-linkedin" href="#"><i class="icon-linkedin"></i></a>
-                </div>
-            </div>
+
+  <?php endwhile;?>
+
+
+
+            
         </div>
         <p>&nbsp;</p>
         <p></p>
@@ -138,17 +147,6 @@ get_header(); ?>
 </div>
 </section>
     	
-            <?php while (have_posts()) : the_post(); ?>          
-                  
-           <!-- Div location -->
-
-
-                <?php the_content( );?>
-           
-
-
-
-            <?php endwhile?>
                
   
 
