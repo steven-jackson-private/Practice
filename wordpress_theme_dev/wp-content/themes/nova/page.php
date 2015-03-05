@@ -27,7 +27,7 @@
 
                 <?php the_content( );?>
            
-
+page.php
 
 
             <?php endwhile?>

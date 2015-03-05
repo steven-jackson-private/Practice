@@ -5,12 +5,11 @@ Template name: Portfolio
 */ 
 get_header(); ?>
 
-
-    <section class="title">
+<section class="title">
         <div class="container">
             <div class="row-fluid">
                 <div class="span6">
-                    <h1>Porfolio</h1>
+                    <h1><?php echo ucfirst(get_the_title());?></h1>
                 </div>
                 <div class="span6">
                     <ul class="breadcrumb pull-right">
@@ -21,6 +20,7 @@ get_header(); ?>
             </div>
         </div>
     </section>
+    
 
    <section id="portfolio" class="container main">    
         <ul class="gallery col-4">

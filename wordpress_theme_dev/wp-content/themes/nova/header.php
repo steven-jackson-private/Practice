@@ -1,4 +1,7 @@
+<?php 
+$title = get_the_title();
 
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -7,13 +10,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title><?php the_title()?></title>
+    <title> <?php echo ucfirst(strtolower ($title));?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    
-    
-
+   
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_template_directory_uri();?>images/ico/apple-touch-icon-144-precomposed.png">
@@ -25,11 +26,11 @@
 </head>
 
 
-<body <?php body_class();?>>
+<body <?php body_class( );?>>
 
 
     <!--Header-->
-    <header class="navbar navbar-fixed-top" style="margin-top:20px;">
+    <header class="navbar navbar-fixed-top" style="margin-top:34px;">
 
         <div class="navbar-inner">
             <div class="container">
@@ -61,7 +62,9 @@
         ?>
 
     </header>
+
     <!-- /header -->
+
 
    
 
