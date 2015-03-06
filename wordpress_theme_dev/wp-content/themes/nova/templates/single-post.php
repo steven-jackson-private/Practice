@@ -9,7 +9,7 @@
 	<?php get_template_part( 'templates/title', 'page' );?>
 
 	<section id="portfolio" class="container main">  
-
+single-post.php
 		<?php 
 		the_post_thumbnail('full' );
 		the_content( );?>

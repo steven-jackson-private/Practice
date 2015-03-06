@@ -8,57 +8,70 @@ get_header(); ?>
         <div class="row-fluid">
             <div class="span8">
                 <div class="blog">
+
+                <?php 
+//Register post type
+    $args = array(
+        
+        'post_type' => 'post',
+        'order' => 'ASC',
+        'posts_per_page' => 3
+
+        
+    );
+
+$posts = new WP_Query( $args );
+wp_reset_postdata();    
+?>
                     
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>     
+  <?php if ( $posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>     
 
   
 
     <div class="blog-item well">
-                        <a href="#"><h2>Duis sed odio sit amet nibh vulputate cursus</h2></a>
+                        <a href="<?php the_permalink();?>"><h2><?php the_title(  );?></h2></a>
                         <div class="blog-meta clearfix">
                             <p class="pull-left">
-                              <i class="icon-user"></i> by <a href="<?php the_permalink();?>"><?php the_author();?></a> | <i class="icon-folder-close"></i> Category <a href="#">Bootstrap</a> | <i class="icon-calendar"></i> Sept 16th, 2012
+                              <i class="icon-user"></i> by <?php the_author();?> |  <i class="icon-folder-close"></i>  <?php the_category();?><a href="#">Bootstrap</a> | <i class="icon-calendar"></i> Sept 16th, 2012
                           </p>
-                          <p class="pull-right"><i class="icon-comment pull"></i> <a href="blog-item.html#comments">3 Comments</a></p>
+                          <p class="pull-right"><i class="icon-comment pull"></i> <a href="<?php the_permalink();?>"><?php comments_number( );?></a></p>
                       </div>
-                      <p><img src="images/sample/blog1.jpg" width="100%" alt="" /></p>
+                      <p><?php the_post_thumbnail( 'full');?></p>
                        <p><?php the_content(); ?></p>
 
                       <a class="btn btn-link" href="<?php the_permalink();?>">Read More <i class="icon-angle-right"></i></a>
                   </div>
                   <!-- End Blog Item -->
         
-            <?php  endwhile; endif;?>
-
-                 <!--  <div class="blog-item well">
-                    <a href="#"><h2>Duis sed odio sit amet nibh vulputate cursus a sit</h2></a>
-                    <div class="blog-meta clearfix">
-                        <p class="pull-left">
-                          <i class="icon-user"></i> by <a href="#">John</a> | <i class="icon-folder-close"></i> Category <a href="#">Bootstrap</a> | <i class="icon-calendar"></i> Sept 16th, 2012
-                      </p>
-                      <p class="pull-right"><i class="icon-comment pull"></i> <a href="blog-item.html#comments">3 Comments</a></p>
-                  </div>
-                  <p><img src="images/sample/blog1.jpg" width="100%" alt="" /></p>
-                  <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-
-                  <a class="btn btn-link" href="#">Read More <i class="icon-angle-right"></i></a>
-              </div> -->
-              <!-- End Blog Item -->
+            <?php  endwhile;?>
 
               <div class="gap"></div>
 
-              <!-- Paginationa -->
-              <div class="pagination">
+
+
+<!-- Add the pagination functions here. -->
+<div class="pagination">
+<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+
+<?php else : ?>
+<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+<?php endif; ?>
+</div>
+
+
+              <!-- Pagination -->
+              <!-- 
                 <ul>
-                    <li><a href="#"><i class="icon-angle-left"></i></a></li>
+                    <li><a href=""><i class="icon-angle-left"></i></a></li>
                     <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
+                    <li><a href="<?php next_posts_link( ); ?>">2</a></li>
                     <li><a href="#">3</a></li>
                     <li><a href="#">4</a></li>
                     <li><a href="#">5</a></li>
                     <li><a href="#"><i class="icon-angle-right"></i></a></li>
                 </ul>
-            </div>
+             -->
 
 
         </div>

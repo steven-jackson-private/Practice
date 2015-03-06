@@ -3,7 +3,7 @@
 Template Name: Services
  */
 get_header(); ?>
-
+<?php get_template_part( 'templates/title', 'page' );?>
  <section class="services">
         <div class="container">
             <div class="row-fluid">
