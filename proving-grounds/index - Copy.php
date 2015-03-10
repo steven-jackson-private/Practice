@@ -60,7 +60,6 @@
    
 
 <div class="box  product-5">  
-<div class="overlay"></div> 
 </div>
 
 
@@ -84,57 +83,6 @@
 
 
 
- <!-- Box Overlay -->
-                               <div class="box2">
-
-                                  <div class="overlay">
-                                   Would you like to know more?</br></br>
-
-                                   <a href="#">click here</a>
-                               </div>
-                           </div>
-                           <!-- Box Overlay End-->
-
-
-                           <div class="box-flip">
-
-                              <div class="front" ></div>
-                              <div class="back"><br>
-                                Surprise 
-                                <br><br><a href="#"> Click me
-                            </div></a>
-
-                        </div>
-
-
-
-                        <div class="box2 rotate">
-
-                          <div class="overlay">
-                           <a href="#"> Are you dizzy yet?
-                           </div></a>
-                       </div>
-
-
-                       <div class="box2" >
-
-                          <div class="overlay-side">
-                              <a href="#"> Click me
-                              </div></a>
-                          </div>
-
-                      </div> <!-- End Container -->
-
-
-
-
-                      <!-- CSS 3 Button -->
-                      
-                    </div>
-
-
-                </section>
-            </div> <!-- End -->
 
 
 

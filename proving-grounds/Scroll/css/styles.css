@@ -1,0 +1,42 @@
+.box {
+	height: 200px;
+	width: 250px;
+	background-color: #000;
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
+}
+
+.product-1 {
+background: url(../img/product-1.png);
+
+}
+.product-2 {
+background: url(../img/product-2.png);
+
+}
+.product-3 {
+background: url(../img/product-3.png);
+
+}
+.product-4 {
+background: url(../img/product-4.png);
+
+}
+.product-5 {
+	background: url(../img/product-5.png);
+    height: 0px;
+}
+.product-6 {
+background: url(../img/product-6.png);
+
+}
+.product-7 {
+background: url(../img/product-7.png);
+
+}
+.product-8 {
+background: url(../img/product-8.png);
+
+}
+

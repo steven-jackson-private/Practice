@@ -6,12 +6,8 @@ $(document).ready(function(){
         $(this).hide();
     });
 
-    // hover hide - Working
-	// $(".product-2").hover(function(){
- 	//        $(this).hide();
- 	//    });
- 	
-
+    
+ 
 
 
  	//Animate to 500px
@@ -99,6 +95,17 @@ $(".close-hidden-content").click(function(){
 // $(".key").hide();
 //     });
 
+
+
+    // $(".product-5").hover(function(){
+          
+    //          $(".product-5").animate(600, function(){
+    //         $(this).css({
+    //           opacity: '1'
+    //       });
+    //          }); 
+         
+    //    });
 
 
 
