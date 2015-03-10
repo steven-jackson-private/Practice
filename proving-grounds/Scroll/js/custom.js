@@ -12,7 +12,7 @@ $(document).ready(function(){
         if (y <= 400) {
 
             $('.product-4').hide();
-            $('.product-5').animate({height: "0px"}, 1000);
+            $('.product-5').animate({height: "0px"}, 200);
 
              }});
 // Testing end
@@ -24,11 +24,9 @@ $(document).ready(function(){
 
         if (y >= 400) {
 
-            $('.product-4').show(300, function() {});
-            $('.product-5').animate({height: "250px"}, 300);
+            $('.product-4').show(200, function() {});
+            $('.product-5').animate({height: "250px"}, 200);
             
-
-
 
     }});
 // Page scroll with Jquery events end
